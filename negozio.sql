@@ -24,5 +24,5 @@ where o.id_cliente=c.id_cliente AND m.id_modello=p.id_modello AND d.id_ordine=o.
 --13
 select g.stato_garanzia, p.cod_seriale from 4CTL_garanzie g, 4CTL_prodotti p where g.id_prodotto=p.id_prodotto;
 --14
-
+select count(p.disponibilita), m.categoria from 4CTL_prodotti p, 4CTL_modelli_prodotto m WHERE p.disponibilita LIKE 'S' group by categoria --NON VA
 
